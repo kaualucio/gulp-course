@@ -1,6 +1,1 @@
-"use strict";
-
-{
-  var number = 32;
-}
-console.log('modals');
+var slide_thumbnail=new Swiper(".slide-thumbnail",{slidesPerView:5,direction:"vertical",spaceBetween:20,watchSlideProgress:!0}),slide_hero=new Swiper(".slide-principal",{effect:"fade",thumbs:{swiper:slide_thumbnail},autoplay:{delay:5e3,disableOnInteraction:!1}}),filters=document.querySelectorAll(".js-nav-games li a"),tabPane=document.querySelectorAll(".tab-pane-games");filters.forEach(function(a,i){a.addEventListener("click",function(e){e.preventDefault(),filters.forEach(function(e){e.classList.remove("active")}),tabPane.forEach(function(e){e.classList.remove("active")}),tabPane[i].classList.add("active"),a.classList.add("active")})});
